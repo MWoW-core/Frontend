@@ -55,7 +55,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://api.mwow.host'
+    baseURL: process.env.API_URL
   },
 
   /*
