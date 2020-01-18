@@ -1,0 +1,65 @@
+<template>
+    <trix-editor
+        ref="trixEditor"
+        @keydown.stop
+        @trix-change="handleChange"
+        @trix-initialize="initialize"
+        @trix-attachment-add="handleAddFile"
+        @trix-attachment-remove="handleRemoveFile"
+        @trix-file-accept="handleFileAccept"
+        :value="value"
+        :placeholder="placeholder"
+        class="trix-content"
+    />
+</template>
+
+<script>
+import Trix from 'trix'
+import 'trix/dist/trix.css'
+
+export default {
+    name: 'vue-trix',
+
+    model: {
+        prop: 'value',
+        event: 'change'
+    },
+
+    props: {
+        name: { type: String },
+        value: { type: String },
+        placeholder: { type: String },
+        withFiles: { type: Boolean, default: true }
+    },
+
+    methods: {
+        initialize() {
+            this.$refs.trixEditor.editor.insertHTML(this.value)
+        },
+
+        handleChange() {
+            this.$emit('change', this.$refs.trixEditor.value)
+        },
+
+        handleFileAccept(e) {
+            if (!this.withFiles) {
+                e.preventDefault()
+            }
+        },
+
+        handleAddFile(event) {
+            this.$emit('file-add', event)
+        },
+
+        handleRemoveFile(event) {
+            this.$emit('file-remove', event)
+        }
+    }
+}
+</script>
+
+<style>
+trix-editor:empty:not(:focus)::before {
+    color: var(--70);
+}
+</style>

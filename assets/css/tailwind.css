@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.cursor-gauntlet {
+  cursor: url('/cursors/gauntlet.cur'), auto;
+}
+
+a,
+p,
+li:hover {
+  cursor: url('/cursors/gauntlet-glowing.cur'), auto;
+}
