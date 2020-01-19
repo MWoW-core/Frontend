@@ -2,6 +2,12 @@ require('dotenv').config()
 
 export default {
   mode: 'universal',
+
+  env: {
+    BASE_URL: process.env.BASE_URL,
+    API_URL: process.env.API_URL
+  },
+
   /*
    ** Headers of the page
    */
