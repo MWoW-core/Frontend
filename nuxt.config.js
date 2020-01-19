@@ -1,7 +1,7 @@
 require('dotenv').config()
 
 export default {
-  mode: 'universal',
+  mode: 'spa',
 
   env: {
     BASE_URL: process.env.BASE_URL,
