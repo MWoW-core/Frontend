@@ -2,8 +2,8 @@
   <div class="flex flex-wrap justify-center">
     <div :class="size ? `max-w-${size}` : null" class="w-full">
       <div
-        class="flex flex-col break-words rounded shadow-md"
         :class="`bg-${color}`"
+        class="flex flex-col break-words rounded shadow-md"
       >
         <slot name="heading">
           <heading v-if="title">

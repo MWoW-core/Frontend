@@ -9061,6 +9061,13 @@ tailwindcss-ripple@^0.2.0:
     color "^3.1.2"
     lodash "^4.17.15"
 
+tailwindcss-typography@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-typography/-/tailwindcss-typography-2.2.0.tgz#7e555f25f1870e39c0013eb746ce365761a9680f"
+  integrity sha512-/v+G9iXkR6Vfj7N2D8bWKrV+kh7mKxDpoTC/RX4+O5mxcJ/Jmep98MJe2Uh9uxHrH4Hh27qeOME7vtJBjpn6iA==
+  dependencies:
+    lodash "^4.17.15"
+
 tailwindcss@^1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.1.4.tgz#786bd5faaf485c9eddcb821dd55666c56baa814e"
