@@ -57,7 +57,7 @@
             />
           </div>
           <menu-down-icon
-            class="w-5 h-5 group-hover:fill-brand fill-grey-darkest focus:fill-brand"
+            class="pl-2 w-5 h-5 group-hover:fill-brand fill-grey-darkest focus:fill-brand"
             icon="chevron-down"
           />
         </div>
