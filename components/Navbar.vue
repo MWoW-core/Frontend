@@ -57,7 +57,7 @@
             />
           </div>
           <menu-down-icon
-            class="w-5 h-5 group-hover:fill-brand fill-grey-darkest focus:fill-brand"
+            class="pl-2 w-5 h-5 group-hover:fill-brand fill-grey-darkest focus:fill-brand"
             icon="chevron-down"
           />
         </div>
@@ -78,20 +78,18 @@
 
     <div
       v-else
-      class="bg-black text-brand border-b w-full p-4 justify-between items-center flex"
+      class="hidden md:flex bg-black text-brand border-b w-full p-4 justify-between items-center"
     >
       <div>
         <navbar-left />
       </div>
 
       <div>
-        <nuxt-link class="mx-2 px-4 py-2   text-brand text-shadow" to="/login"
+        <nuxt-link class="mx-2 px-4 py-2 text-brand text-shadow" to="/login"
           >Login</nuxt-link
         >
 
-        <nuxt-link
-          class="mx-2 px-4 py-2   text-brand text-shadow"
-          to="/register"
+        <nuxt-link class="mx-2 px-4 py-2 text-brand text-shadow" to="/register"
           >Register</nuxt-link
         >
       </div>

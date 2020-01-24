@@ -31,11 +31,15 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['~/assets/css/v-tooltip.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/validation'],
+  plugins: [
+    '~/plugins/validation',
+    '~/plugins/v-tooltip',
+    '~/plugins/helpers/toHumanDate'
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -61,7 +65,12 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: process.env.API_URL
+    baseURL: process.env.API_URL,
+    withCredentials: true,
+    headers: {
+      'X-Requested-With': 'XMLHttpRequest',
+      Accept: 'application/json'
+    }
   },
 
   /*

@@ -65,8 +65,7 @@
         <div class="p-2 flex justify-between w-full">
           <div class="flex items-center text-brand px-2">
             <nuxt-link :to="`/news/${article.slug}`">
-              <link-icon />
-              Read more.
+              <link-icon />Read more.
             </nuxt-link>
           </div>
 

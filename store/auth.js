@@ -58,6 +58,12 @@ export const actions = {
     await this.$axios.get('/airlock/csrf-cookie')
   },
 
+  async changePassword({ dispatch }, { form }) {
+    await dispatch('csrf')
+
+    await this.$axios.$post('/api/change-password', form)
+  },
+
   async user({ dispatch, commit }) {
     try {
       const data = await this.$axios.$get(`/api/user`)

@@ -24,11 +24,19 @@
 
     <slot />
 
-    <slot :has-errors="hasErrors" errors="errors" name="errors">
-      <ul v-show="hasErrors" class="text-red-500 text-xs italic mt-4">
-        <li v-for="(error, i) in errors" :key="i">{{ error }}</li>
-      </ul>
-    </slot>
+    <div class="flex flex-wrap flex-col">
+      <slot name="help">
+        <small class="lead">
+          {{ help }}
+        </small>
+      </slot>
+
+      <slot :has-errors="hasErrors" errors="errors" name="errors">
+        <ul v-show="hasErrors" class="text-red-500 text-xs italic mt-4">
+          <li v-for="(error, i) in errors" :key="i">{{ error }}</li>
+        </ul>
+      </slot>
+    </div>
   </div>
 </template>
 
@@ -52,6 +60,11 @@ export default {
     },
 
     label: {
+      type: String,
+      default: ''
+    },
+
+    help: {
       type: String,
       default: ''
     }

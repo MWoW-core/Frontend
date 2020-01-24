@@ -5,9 +5,9 @@
     <a
       :href="downloadRealmlistURL"
       target="_blank"
-      class="text-brand text-shadow border-r border-l border-brand px-2"
+      class="text-brand text-shadow lg:border-r lg:border-l lg:border-brand px-2"
     >
-      Download Realmlist
+      Realmlist: login.mwow.host
     </a>
 
     <a

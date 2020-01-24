@@ -1,18 +1,13 @@
 <template>
-  <div class="flex flex-wrap justify-center">
-    <div :class="size ? `max-w-${size}` : null" class="w-full">
-      <div
-        class="flex flex-col break-words rounded shadow-md"
-        :class="`bg-${color}`"
-      >
-        <slot name="heading">
-          <heading v-if="title">
-            {{ title }}
-          </heading>
-        </slot>
+  <div :class="size ? `max-w-${size}` : null" class="w-full">
+    <div :class="`bg-${color}`" class="flex flex-col break-words shadow-md">
+      <slot name="heading">
+        <heading v-if="title">
+          {{ title }}
+        </heading>
+      </slot>
 
-        <slot />
-      </div>
+      <slot />
     </div>
   </div>
 </template>

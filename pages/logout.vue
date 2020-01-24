@@ -1,5 +1,9 @@
 <template>
-  <card title="Thanks for the visit, hope to see you another time! :)">
+  <card
+    title="Thanks for the visit, hope to see you another time! :)"
+    class="w-full px-4 py-2 mb-2 text-brand"
+    color="black"
+  >
     <div class="flex items-center">
       <img
         class="w-full"
@@ -10,7 +14,13 @@
 </template>
 
 <script>
+import Card from '~/components/Card'
+
 export default {
+  components: {
+    Card
+  },
+
   mounted() {
     this.$store.dispatch('auth/logout')
   }

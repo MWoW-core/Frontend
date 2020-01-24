@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black cursor-gauntlet">
+  <main class="flex-grow bg-black cursor-gauntlet">
     <portal-target name="dropdown" slim />
 
     <div class="flex flex-col">
@@ -13,7 +13,36 @@
         </div>
       </div>
     </div>
-  </div>
+
+    <footer class="flex items-center">
+      <portal-target name="footer" slim />
+
+      <nav v-if="$store.state.auth.user" class="flex mt-0 m-auto">
+        <nuxt-link to="/account" class="block px-6 py-2 text-brand text-shadow">
+          <account-icon /> Account
+        </nuxt-link>
+
+        <nuxt-link
+          class="block px-6 py-2 text-brand text-shadow"
+          to="/change-password"
+        >
+          <lock-reset-icon />Change password
+        </nuxt-link>
+
+        <nuxt-link class="block px-6 py-2 text-brand text-shadow" to="/unstuck">
+          <fork-lift-icon />Unstuck
+        </nuxt-link>
+
+        <nuxt-link class="block px-6 py-2 text-brand text-shadow" to="/vote">
+          <vote-icon />Vote
+        </nuxt-link>
+
+        <nuxt-link class="block px-6 py-2 text-brand text-shadow" to="/store">
+          <cart-icon />Store
+        </nuxt-link>
+      </nav>
+    </footer>
+  </main>
 </template>
 
 <script>
@@ -23,8 +52,19 @@ import Navbar from '~/components/Navbar'
 export default {
   layoutTransition: 'fade',
 
+  head: {
+    bodyAttrs: {
+      class: 'flex flex-col min-h-screen'
+    }
+  },
+
   components: {
-    Navbar
+    Navbar,
+    AccountIcon: () => import('vue-material-design-icons/Account'),
+    LockResetIcon: () => import('vue-material-design-icons/LockReset'),
+    ForkLiftIcon: () => import('vue-material-design-icons/Forklift'),
+    VoteIcon: () => import('vue-material-design-icons/Vote'),
+    CartIcon: () => import('vue-material-design-icons/Cart')
   },
 
   data: () => ({
