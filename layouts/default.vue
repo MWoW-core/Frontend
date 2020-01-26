@@ -17,7 +17,7 @@
     <footer class="flex items-center">
       <portal-target name="footer" slim />
 
-      <nav v-if="$store.state.auth.user" class="flex mt-0 m-auto">
+      <nav v-if="$store.state.auth.user" class="flex flex-wrap mt-0 m-auto">
         <nuxt-link to="/account" class="block px-6 py-2 text-brand text-shadow">
           <account-icon /> Account
         </nuxt-link>
