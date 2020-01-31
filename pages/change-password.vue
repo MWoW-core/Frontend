@@ -73,12 +73,6 @@ export default {
     LoadingButton
   },
 
-  computed: {
-    ...mapState({
-      user: (state) => state.auth.user
-    })
-  },
-
   data: () => ({
     states,
     state: states.DEFAULT,
@@ -89,6 +83,12 @@ export default {
       password_confirmation: ''
     }
   }),
+
+  computed: {
+    ...mapState({
+      user: (state) => state.auth.user
+    })
+  },
 
   methods: {
     async submit() {

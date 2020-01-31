@@ -1,9 +1,7 @@
 <template>
   <div class="flex flex-wrap mb-6">
     <slot class="labelClasses" name="label">
-      <label :classes="labelClasses" :for="attribute" :value="labelValue">{{
-        labelValue
-      }}</label>
+      <label :classes="labelClasses" :for="attribute">{{ labelValue }}</label>
     </slot>
 
     <slot

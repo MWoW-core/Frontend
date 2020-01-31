@@ -3,7 +3,7 @@
     <portal-target name="dropdown" slim />
 
     <div class="flex flex-col">
-      <div @click="hideDropdownMenus" class="min-h-screen flex flex-col">
+      <div class="min-h-screen flex flex-col">
         <navbar />
 
         <img src="~/static/header.png" />
@@ -65,16 +65,6 @@ export default {
     ForkLiftIcon: () => import('vue-material-design-icons/Forklift'),
     VoteIcon: () => import('vue-material-design-icons/Vote'),
     CartIcon: () => import('vue-material-design-icons/Cart')
-  },
-
-  data: () => ({
-    showUserMenu: false
-  }),
-
-  methods: {
-    hideDropdownMenus() {
-      this.showUserMenu = false
-    }
   }
 }
 </script>

@@ -46,15 +46,15 @@
                 }
               })
             "
-            class="p-2 text-brand"
+            class="p-2"
           >
             <category-icon />
-            In {{ article.category }}
+            {{ article.category }}
           </h2>
 
           <h2 class="p-2">
             <calendar-icon />
-            {{ article.created_at }}
+            {{ toHumanDateTime(article.created_at) }}
           </h2>
         </span>
 
