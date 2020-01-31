@@ -38,7 +38,8 @@ export default {
   plugins: [
     '~/plugins/validation',
     '~/plugins/v-tooltip',
-    '~/plugins/helpers/toHumanDate'
+    '~/plugins/helpers/toHumanDate',
+    '~/plugins/axios'
   ],
   /*
    ** Nuxt.js dev-modules
@@ -60,18 +61,6 @@ export default {
     '@nuxtjs/pwa',
     'portal-vue/nuxt'
   ],
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
-  axios: {
-    baseURL: process.env.API_URL,
-    withCredentials: true,
-    headers: {
-      'X-Requested-With': 'XMLHttpRequest',
-      Accept: 'application/json'
-    }
-  },
 
   /*
    ** Router config
