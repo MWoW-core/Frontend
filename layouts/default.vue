@@ -52,11 +52,11 @@ import Navbar from '~/components/Navbar'
 export default {
   layoutTransition: 'fade',
 
-  head: {
+  head: () => ({
     bodyAttrs: {
       class: 'flex flex-col min-h-screen'
     }
-  },
+  }),
 
   components: {
     Navbar,
