@@ -55,7 +55,7 @@ export const actions = {
   },
 
   async csrf() {
-    await this.$axios.$get('/airlock/csrf-cookie')
+    await this.$axios.$get('/sanctum/csrf-cookie')
   },
 
   async changePassword({ dispatch }, { form }) {
